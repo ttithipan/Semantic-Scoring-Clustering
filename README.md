@@ -68,7 +68,7 @@ pip install -r requirements.txt
 Start the API server with hot‑reloading enabled:
 
 ```bash
-uvicorn main:app --reload
+uvicorn server:app --reload
 ```
 
 * Server URL: `http://127.0.0.1:8000`

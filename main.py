@@ -43,7 +43,6 @@ for cluster_id, indices in clustered_tickets.items():
             })
             
     else:    
-        # 2. Logic for regular clusters: Pick only the Winner
         best_index = max(indices, key=lambda i: tickets_score[i])
         
         champions[cluster_id] = {
@@ -54,3 +53,9 @@ for cluster_id, indices in clustered_tickets.items():
         
         print(f"--- Cluster {cluster_id} ---")
         print(f"Champion: {tickets[best_index]} (Score: {tickets_score[best_index]})")
+        for index in indices:
+            score = tickets_score[index]
+            text = tickets[index]
+            
+            # Print every single item
+            print(f" - {text} (Score: {score})")
